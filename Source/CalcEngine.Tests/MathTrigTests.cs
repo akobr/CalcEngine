@@ -2,7 +2,7 @@
 
 namespace CalcEngine.Tests
 {
-    public class IntegrationTests
+    public class MathTrigTests
     {
         [Fact]
         public void should_test_all_classes_functionality_calculations()

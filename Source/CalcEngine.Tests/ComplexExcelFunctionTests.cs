@@ -13,11 +13,6 @@ namespace CalcEngine.Tests
             calcEngine.Test("=SUM(1,2,AVERAGE(1,2) + 3)", 7.5);
         }
 
-        public void Eval(string expression, double expectedValue)
-        {
-            calcEngine.Test(expression, expectedValue);
-        }
-
         [Fact]
         public void EvaluatesSumFunction()
         {
@@ -54,6 +49,11 @@ namespace CalcEngine.Tests
         public void EvaluatesCustomFunction1()
         {
             Eval("=(2*SUM(2,4)+AVERAGE(1,2,3))/2", 7);
+        }
+
+        private void Eval(string expression, double expectedValue)
+        {
+            calcEngine.Test(expression, expectedValue);
         }
     }
 }
